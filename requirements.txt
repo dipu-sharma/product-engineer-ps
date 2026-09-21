@@ -1,0 +1,7 @@
+# Core dependencies
+pydantic>=2.6.0
+rich>=13.7.0
+
+# Development and testing dependencies
+pytest>=8.0.0
+pytest-asyncio>=0.23.5

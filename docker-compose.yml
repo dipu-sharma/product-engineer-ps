@@ -1,0 +1,20 @@
+services:
+  test:
+    build: .
+    volumes:
+      - .:/app
+    command: pytest -v
+
+  benchmark:
+    build: .
+    volumes:
+      - .:/app
+    command: python scripts/run_benchmark.py
+
+  cli:
+    build: .
+    volumes:
+      - .:/app
+    stdin_open: true
+    tty: true
+    command: python -m src.cli.main --help
